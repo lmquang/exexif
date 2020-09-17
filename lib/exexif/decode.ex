@@ -36,7 +36,7 @@ defmodule Exexif.Decode do
   def tag(_, 0x8830, value), do: {:sensitivity_type, sensitivity_type(value)}
   def tag(_, 0x8831, value), do: {:standard_output_sensitivity, value}
   def tag(_, 0x8832, value), do: {:recommended_exposure, value}
-  def tag(_, 0x9000, value), do: {:exif_version, version(value)}
+  def tag(_, 0x9000, value), do: {:exif_version, "Unknown"}
   def tag(_, 0x9003, value), do: {:datetime_original, value}
   def tag(_, 0x9004, value), do: {:datetime_digitized, value}
   def tag(_, 0x9101, value), do: {:component_configuration, component_configuration(value)}
